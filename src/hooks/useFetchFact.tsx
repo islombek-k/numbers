@@ -9,6 +9,9 @@ export const useFetchFact = () => {
       if (!response.ok) throw new Error("Network error");
       const data = await response.text();
       setFact(data);
+    } catch (error) {
+      console.error("Error fetching fact:", error);
+      setFact("An error occurred while fetching the fact.");
     } finally {
       setLoading(false);
     }
