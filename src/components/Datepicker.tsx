@@ -6,7 +6,6 @@ type DayMonthPickerProps = {
 };
 
 function DayMonthPicker({ day, setDay, month, setMonth }: DayMonthPickerProps) {
-  console.log(month);
   const days = Array.from(
     { length: month === "02" ? 28 : 31 },
     (_, i) => i + 1
