@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/proxy/:path*",
+      "destination": "https://thingproxy.freeboard.io/fetch/http://numbersapi.com/:path*"
+    }
+  ]
+}
