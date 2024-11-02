@@ -5,7 +5,11 @@ export const useFetchFact = () => {
   const fetchFact = async (url: string) => {
     setLoading(true);
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        headers: {
+          "x-cors-api-key": "temp_88ce187e9ffe8eaa3b2928e16af88092",
+        },
+      });
       if (!response.ok) throw new Error("Network error");
       const data = await response.text();
       setFact(data);

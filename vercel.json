@@ -2,7 +2,18 @@
   "rewrites": [
     {
       "source": "/api/proxy/:path*",
-      "destination": "https://thingproxy.freeboard.io/fetch/http://numbersapi.com/:path*"
+      "destination": "https://proxy.cors.sh/http://numbersapi.com/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/proxy/(.*)",
+      "headers": [
+        {
+          "key": "x-cors-api-key",
+          "value": "temp_88ce187e9ffe8eaa3b2928e16af88092"
+        }
+      ]
     }
   ]
 }

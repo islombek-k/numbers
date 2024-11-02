@@ -8,7 +8,7 @@ import { useResult } from "../hooks/useResult";
 import { factType } from "../context/ResultContext";
 import { useFetchFact } from "../hooks/useFetchFact";
 
-const proxy_url = "https://thingproxy.freeboard.io/fetch";
+const proxy_url = "https://proxy.cors.sh";
 
 const GetFacts = () => {
   const { setLoading, setFactType, factType, number, isRandom, setIsRandom } =
