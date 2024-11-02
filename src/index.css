@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.variant-option select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.variant-option .variant-select-wrapper {
+  position: relative;
+  width: 50%;
+}
+
+.variant-option .variant-select-wrapper:after {
+  content: url("https://api.iconify.design/ep/arrow-right.svg?color=black&rotate=90deg");
+  position: absolute;
+  display: block;
+  top: 55%;
+  transform: translateY(-50%);
+  right: 3%;
+  pointer-events: none;
+}
