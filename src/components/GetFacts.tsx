@@ -8,16 +8,11 @@ import { useResult } from "../hooks/useResult";
 import { factType } from "../context/ResultContext";
 import { useFetchFact } from "../hooks/useFetchFact";
 
+const proxy_url = "https://thingproxy.freeboard.io/fetch";
+
 const GetFacts = () => {
-  const {
-    setLoading,
-    // setFact,
-    setFactType,
-    factType,
-    number,
-    isRandom,
-    setIsRandom,
-  } = useResult();
+  const { setLoading, setFactType, factType, number, isRandom, setIsRandom } =
+    useResult();
 
   const fetchFact = useFetchFact();
 
@@ -30,8 +25,8 @@ const GetFacts = () => {
 
     const url =
       factType === "date"
-        ? `http://numbersapi.com/${month}/${day}/date`
-        : `http://numbersapi.com/${
+        ? `${proxy_url}/http://numbersapi.com/${month}/${day}/date`
+        : `${proxy_url}/http://numbersapi.com/${
             isRandom ? randomNumber : number
           }/${factType}`;
 
