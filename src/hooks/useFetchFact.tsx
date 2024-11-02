@@ -7,7 +7,7 @@ export const useFetchFact = () => {
     try {
       const response = await fetch(url, {
         headers: {
-          "x-cors-api-key": "temp_88ce187e9ffe8eaa3b2928e16af88092",
+          "x-cors-api-key": import.meta.env.VITE_API_CORS_KEY,
         },
       });
       if (!response.ok) throw new Error("Network error");
